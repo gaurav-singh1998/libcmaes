@@ -4,7 +4,7 @@ import cma_multiplt as lcmaplt
 # input parameters for a 10-D problem
 x = [2.0] * 10
 sigma = 0.1
-outfile = 'lcmaes.dat'
+outfile = 'simple.dat'
 
 p = lcmaes.make_simple_parameters(x, sigma)
 p.set_str_algo("acmaes")
