@@ -17,7 +17,7 @@ outfile = 'lcmaes.dat'
 
 def to_params(x0, sigma0, strategy="acmaes", outfile=outfile):
     """return parameter object instance for ``lcmaes.pcmaes``"""
-    p = cmaes.make_simple_parameters(x, sigma)
+    p = cmaes.make_simple_parameters(x0, sigma0)
     p.set_str_algo("acmaes")
     p.set_fplot(outfile)
     return p
