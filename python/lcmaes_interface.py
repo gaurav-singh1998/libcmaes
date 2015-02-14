@@ -17,14 +17,14 @@ outfile = 'lcmaes.dat'
 
 def to_params(x0, sigma0, strategy="acmaes", outfile=outfile):
     """return parameter object instance for ``lcmaes.pcmaes``"""
-    p = lcmaes.make_simple_parameters(x, sigma)
+    p = cmaes.make_simple_parameters(x, sigma)
     p.set_str_algo("acmaes")
     p.set_fplot(outfile)
     return p
 
 def to_fitfunc(f):
     """return function from callable `f`, where `f` accepts a list of numbers as input."""
-    return lcmaes.fitfunc_pbf.from_callable(lambda x, n: f(x))
+    return cmaes.fitfunc_pbf.from_callable(lambda x, n: f(x))
     
 def plot(outfile=outfile):
     cmaplt(outfile)
