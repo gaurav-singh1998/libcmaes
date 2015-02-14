@@ -1,7 +1,7 @@
 """usage (yet versatile): 
 
     import lcmaes_interface as lc 
-    myfun = lambda x: sum([xi**2 for xi in x])  # a callable accepting a list of numbers 
+    myfun = lambda x: sum([xi**2 for xi in x])  # myfun accepts a list of numbers as input
     res = lc.cmaes.pcmaes(lc.to_fitfunc(myfun),  
                           lc.to_params([2.1] * 10, 0.1))
     lc.plot()
