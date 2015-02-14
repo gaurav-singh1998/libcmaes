@@ -2,7 +2,7 @@ import lcmaes
 import cma_multiplt as lcmaplt
 
 # input parameters for a 10-D problem
-x = [10] * 10
+x = [2.0] * 10
 sigma = 0.1
 outfile = 'lcmaes.dat'
 
@@ -13,7 +13,7 @@ p.set_fplot(outfile)
 # objective function.
 def nfitfunc(x, n):
     assert len(x) == n  # should not be necessary
-    return sum([y**2 for y in x])
+    return sum([xi**2 for xi in x])
     
 # pass the function and parameters to cmaes, run optimization and collect solution object.
 cmasols = lcmaes.pcmaes(lcmaes.fitfunc_pbf.from_callable(nfitfunc), p)
