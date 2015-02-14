@@ -8,7 +8,7 @@
     sigma0 = 0.1
     
     # run optimization via lci
-    res = lci.cmaes.pcmaes(lci.to_fitfunc(myfun), lci.to_params(x0, sigma0))
+    res = lci.lcmaes.pcmaes(lci.to_fitfunc(myfun), lci.to_params(x0, sigma0))
     lci.plot()
     
 Details: for the time being `to_params` is based on `lcmaes.make_simple_parameters`, 
@@ -16,7 +16,7 @@ but that might change in future to expose more parameters.
 
 """
 
-import lcmaes as cmaes
+import lcmaes
 import cma_multiplt as cmaplt
 outfile_current = 'lcmaes.dat'
 
