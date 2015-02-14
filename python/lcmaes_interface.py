@@ -1,10 +1,15 @@
 """usage (yet versatile): 
 
-    import lcmaes_interface as lc 
+    import lcmaes_interface as lci 
+    
+    # setup input parameters
     myfun = lambda x: sum([xi**2 for xi in x])  # myfun accepts a list of numbers as input
-    res = lc.cmaes.pcmaes(lc.to_fitfunc(myfun),  
-                          lc.to_params([2.1] * 10, 0.1))
-    lc.plot()
+    x0 = [2.1] * 10
+    sigma0 = 0.1
+    
+    # run optimization via lci
+    res = lci.cmaes.pcmaes(lci.to_fitfunc(myfun), lci.to_params(x0, sigma0))
+    lci.plot()
     
 Details: for the time being `to_params` is based on `lcmaes.make_simple_parameters`, 
 but that might change in future to expose more parameters. 
