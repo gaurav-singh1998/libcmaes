@@ -1,10 +1,10 @@
 """usage (yet versatile): 
 
-    import lcmaes_interface as lib 
+    import lcmaes_interface as lc 
     myfun = lambda x: sum([xi**2 for xi in x])  # a callable accepting a list of numbers 
-    res = lib.cmaes.pcmaes(lib.to_fitfunc(myfun),  
-                           lib.to_params([2.1] * 10, 0.1))
-    lib.plot()
+    res = lc.cmaes.pcmaes(lc.to_fitfunc(myfun),  
+                          lc.to_params([2.1] * 10, 0.1))
+    lc.plot()
     
 Details: for the time being `to_params` is based on `lcmaes.make_simple_parameters`, 
 but that might change in future to expose more parameters. 
