@@ -27,5 +27,5 @@ def to_fitfunc(f):
     return cmaes.fitfunc_pbf.from_callable(lambda x, n: f(x))
     
 def plot(outfile=outfile):
-    cmaplt(outfile)
+    cmaplt.plot(outfile)
     
